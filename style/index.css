@@ -1,7 +1,11 @@
 /* Add CSS styling here */
 * {
-    
+    box-sizing: border-box;
+    max-width: 100%;
 }
+html {
+    font-size: 62.5%; /* Set the root font size to 62.5% */
+  }
 /*header*/
 
 header {
@@ -26,9 +30,12 @@ nav.links {
 a {
     text-decoration: none;
 }
-.home {
+.links:hover {
     background-color: black;
-    color: white;
+}
+.home {
+    background-color: white;
+    color: black;
     border: 1px solid black;
     text-align: center;
     padding:5px 15px 5px 15px;
@@ -127,7 +134,7 @@ footer {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 150px;
+    height: 10.5rem;
 }
 
 footer h3 {
@@ -137,5 +144,53 @@ footer h3 {
 a button.projects-button {
     display: flex;
 text-align: center;
-margin-left: 22px;
+margin-left: 10.2rem;
+}
+
+
+@media (max-width: 800px) {
+header {
+align-items: center;
+background-color: white;
+border: none;
+}
+nav.links {
+    flex-direction: column;
+}
+.top-body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-image {
+    align-self: center;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.img-1, .img-2, .img-3, .img-4, .img-5, .img-6, .img-7, .img-8 {
+    flex-basis: 50%;
+    flex-direction: column;
+    padding-left: 100px;
+}
+}
+
+@media (max-width: 500px) {
+    header {
+        align-items: center;
+    }
+    nav.links {
+        flex-direction: column;
+    }
+    h1 {
+        align-items: center;
+    }
+    .img-1, .img-2, .img-3, .img-4, .img-5, .img-6, .img-7, .img-8 {
+        flex-basis: 50%;
+        flex-direction: column;
+        align-items: center;
+        padding-right: 10px;
+    }
 }
